@@ -1,0 +1,21 @@
+Interview Questions in JavaScript
+1)  what is javascript and where to use javascript?
+2)  data types in javascript?
+3)  how to intialize vairables?
+4)  when i run javascript code what will happen in background?
+5)  difference between var,let,const?
+6)  what is hoisting in js?
+7)  explain closures and what is lexical environment in js?
+8)  explain filter(),map(),reduce(),slice(),apply() functions ?
+9)  What is the difference between Java and JavaScript?
+10) What is the difference between null and undefined in JavaScript?
+11) What does this mean in JavaScript?
+12) How many types of functions are there in JavaScript?
+13) What is the difference between == and ===?
+14) What does the isNaN() function do?
+15) Can you use an anonymous function as a parameter for another function in JavaScript?
+16) What type of pop-ups does JavaScript support?
+17) What is a callback?
+18) What is the difference between Local storage and Session storage?
+19) What is the difference between window and document in JavaScript?
+20) What are the different types of errors in JavaScript?
