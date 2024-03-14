@@ -1,18 +1,16 @@
-let str1 = "anagram";
-let str2 = "nagaram";
-let arr = [str1, str2];
-for (let index = 1; index <= arr.length; index++) {
+function anagram(s, t) {
+    if (s.length !== t.length) return false;
     let obj1 = {};
     let obj2 = {};
-    arr[index] = arr[index].split("");
-    for (let i = 0; i < arr[index].length; i++) {
-        if (arr[index][i] in obj1) {
-            obj1[arr[index][i]] += 1;
-        } else {
-            obj1[arr[index][i]] += 1;
+    for (let i = 0; i < s.length; i++) {
+        obj1[s[i]] = (obj1[s[i]] || 0) + 1;
+        obj2[s[i]] = (obj2[s[i]] || 0) + 1;
+        console.log(obj2,obj1);
+        for(let key in obj1){
+            if(obj1[key] != obj2[key]) return false;
         }
     }
-    arr[index] = arr[index].join("");
+    return true;
 }
-console.log(obj1);
-console.log(obj2);
+const output = anagram("a", "ab");
+console.log(output);

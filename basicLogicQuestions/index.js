@@ -99,6 +99,30 @@
 // else {
 //     console.log("false");
 // }
-let char = 'a';
-let asciiValue = char.charCodeAt(0);
-console.log(asciiValue)
+// obj1 = { 'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000 };
+// let s = 'MCMXCIV'.split("");
+// let x = 0;
+// for (let i = 0; i < s.length; i++) {
+//     x = x + obj1[s[i]];
+// }
+// console.log(x);
+let str = "v@@enk@at".split("");
+const alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+let f_i = 0;
+let l_i = str.length - 1;
+for (let i = f_i; i < l_i; i++) {
+    if (!(alphabet.includes(str[f_i].toUpperCase()))) {
+        f_i++;
+        continue;
+    }
+    if (!(alphabet.includes(str[l_i].toUpperCase()))) {
+        l_i--;
+        continue;
+    }
+    temp = str[f_i];
+    str[f_i] = str[l_i];
+    str[l_i] = temp;
+    f_i++;
+    l_i--;
+}
+console.log(str.join(""));
