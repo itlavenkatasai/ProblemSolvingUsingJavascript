@@ -13,4 +13,4 @@ for (let i = 0; i < l1.length; i++) {
         }
     }
 }
-console.log(l3.reverse().join(""))
+console.log(l3.reverse().join(""));
