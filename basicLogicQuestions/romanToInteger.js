@@ -1,11 +1,15 @@
+// 
 var romanToInt = function (s) {
-    obj1 = { 'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000 };
-    s = s.split("");
-    let x = 0;
-    for (let i = 0; i < s.length; i++) {
-        x = x + obj1[s[i]];
+    let obj1 = { 'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000 };
+    let re = 0;
+    s = s.split(""); // Split the input string into individual characters
+    for (let i of s) {
+        if (i in obj1) {
+            re += obj1[i];
+        } else {
+            return "Invalid Roman numeral";
+        }
     }
-    return x;
+    return re;
 };
-const output = romanToInt("MCMXCIV");
-console.log(output);
+console.log(romanToInt("III"))
