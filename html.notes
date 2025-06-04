@@ -1,0 +1,188 @@
+1) what is html?
+"HTML stands for HyperText Markup Language. It is the standard language used to create and structure content on the web. 
+HTML defines the structure of a webpage using elements represented by tags. 
+These elements tell the browser how to display text, images, links, buttons, forms, and other content. 
+HTML is not a programming language—it's a markup language that works together with CSS for styling and JavaScript for interactivity. 
+Without HTML, browsers wouldn’t know how to render a webpage."
+
+2)HTML tags?
+html tags are used markup start and end tags.
+these are 2 types : open and closing tags
+ex: <p></p> this is a tag open and close tag.
+
+3)HTML elements?
+html element usually consist of start tag and end tag.
+ex: <p>This is the content of the paragraph </p>
+
+4)HTML attributes?
+html attributes provide the additional information about elements. attributes are always specified in start tag.
+Note : all attributes are made up of two parts name and value. and attribute name and value is case senstive.
+ex : <a href : "http://google.com" target="_blank" title = "Click Here">
+
+5)what is block and inline elements?
+Block elements : Block elements take up the full width of their container, starting on a new line. They stack vertically by default.
+
+Characteristics:
+
+Always start on a new line.
+
+Stretch the full width of their parent container (by default).
+
+Can contain other block or inline elements.
+ex : <div> , <h1> to <h6> , <section> , <form> , <ul> ... etc
+
+Inline elements : Inline elements do not start on a new line. They appear within the flow of surrounding text and take only as much width as needed.
+
+Characteristics:
+
+Do not start on a new line.
+
+Only take up as much width as their content.
+
+Cannot contain block-level elements (only inline elements or text).
+ex : <span> , <a> , <img>,<label>
+
+6) when are comments used in html?
+HTML comments are used to leave notes or explanations in your code that do not appear on the webpage. They're helpful for developers to understand, organize, or debug code later.
+ex : <!-- This is a comment -->
+
+7) what are the html tags used to display data in tabuler form?
+Tag	Description
+<table>:	Defines the table container
+<tr>   :Table row — groups cells horizontally
+<th>   :Table header cell — bold and centered by default
+<td>   :  Table data cell — holds actual data
+<thead>:	Groups the header rows (usually contains <tr> and <th>)
+<tbody>:	Groups the main body rows
+<tfoot>:	Groups the footer rows (useful for summaries or totals)
+colspan / rowspan:	Attributes used in <td> or <th> to merge columns or rows
+
+8)how to create hyperLink in Html ?
+You can create a hyperlink using the <a> tag (called the anchor tag) in HTML.
+ex : <a href="URL">Link Text</a>
+href (hypertext reference): The destination URL.
+
+Link Text: The clickable text that the user sees.
+
+9) Name some common lists are used when designing a web page?
+In HTML, lists are used to display items in an organized way. 
+There are three main types of lists commonly used in web design:
+1)ordered list : Displays items in a numbered sequence (1, 2, 3...). <ol> <li> </ol>
+2)unordered list : Displays items with bullets. <ul><li></ul>
+3)defination list : Used for term-definition pairs. <dl><dt><dd><dl>
+
+10)what is semantic in html ?
+Semantic HTML refers to using HTML tags that clearly describe their meaning in a human- and machine-readable way.
+ex : <header>	Represents the header section of a page or section
+<nav>	Navigation links
+<main>	Main content of the document
+non-semantic tags : 
+ex :
+<div>	Generic container
+<span>	Generic inline container
+
+11) how to create a nested web page in html ?
+If by "nested web page", you mean embedding one web page inside another,
+the most common and standard way in HTML is by using the <iframe> tag.
+ex : 
+<html>
+<head>
+  <title>Main Page</title>
+</head>
+<body>
+  <h1>This is the Main Page</h1>
+
+  <!-- Embedding another page -->
+  <iframe src="nested.html" width="600" height="400" title="Nested Page"></iframe>
+</body>
+</html>
+
+12) what is a style sheet ?
+A style sheet in HTML is a set of rules used to define the appearance and layout of HTML elements on a web page.
+It tells the browser how to display the content — colors, fonts, spacing, positioning, etc.
+
+Style sheets are written in CSS (Cascading Style Sheets), which is the styling language used with HTML.
+Type	     Description	                                               Example
+Inline CSS  	Style written inside an HTML element using the style attribute	  <p style="color: red;">Hello</p>
+Internal CSS	Style written within a <style> tag in the <head> section	See example below
+External CSS	Style written in a separate .css file, linked to the HTML file	<link rel="stylesheet" href="style.css">
+Why Use Style Sheets?
+✅ Separates content (HTML) from design (CSS)
+
+✅ Makes styling consistent and reusable
+
+✅ Easier to maintain and update
+
+✅ Enables responsive design for all screen sizes
+
+13)explain the layout of html?
+"The layout of an HTML page refers to how different sections of a web page are structured and arranged. It's mainly done using HTML tags that define the semantic meaning of each part of the page.
+
+A typical layout includes:
+
+<header> – This section is used for the top part of the page, often containing the logo or website title.
+
+<nav> – Contains navigation links or menus that help users move around the website.
+
+<main> – Holds the main content of the page, which is unique to each webpage.
+
+<section> – Used to divide the main content into logical blocks or topics.
+
+<article> – For self-contained content like blog posts or news articles.
+
+<aside> – Typically used for sidebars, ads, or related links.
+
+<footer> – Appears at the bottom of the page, often containing copyright, contact info, or useful links.
+
+14)what is marquee tag ?
+marquee is used for the scrolling text on a web page.it scrolls the image or text up,down left or right automatically.
+if you put the text which yiu want to scroll within the <marquee>  </marquee>.
+
+15)what are the tags used to seperate a section ?
+I) <br>
+II)<p>
+III)<blockquote>
+
+16)difference between div and span?
+📦 <div> – Block-level Container
+*Used to divide the page into sections
+
+*Starts on a new line and takes up the full width available
+✏️ <span> – Inline Container
+*Used to style part of a line or sentence
+
+*Does not break the flow of text
+*for adding colors on text and highlight any text.
+ex : <p>This is a <span style="color: red;">highlighted</span> word.</p>
+
+17)what is the purpose of using alternative text in images?
+✅ Displays When Image Fails to Load
+If the image doesn’t load due to a broken link or slow internet, the alt text appears instead.
+
+This helps users understand what was supposed to be there.
+-> alt text also helps search engines understand the content of the image, which improves image SEO and discoverability in search results.
+18) what are the entities in html?
+✅ Why Use Entities?
+Display special characters (like <, >, &) that are part of HTML syntax.
+
+Insert symbols (like ©, ®, €, ₹) not found on a keyboard.
+
+&amp;   →   &
+&lt;    →   <
+&gt;    →   >
+&quot; →   "
+&apos; →   '
+
+19)explain difference between local storage and session storage?
+local-storage >>: localstorage object stores the data without expiry date.
+localstorage data will not be deleted when browser closes.
+localstorage data can be shared between multiple windows of the browser. 
+session-storage >>: session storage object store the data for only one session.
+session storage data will be deleted after window closes.
+session storage data cannot be shared between multiple windows.
+
+20)how do you create text on webpage that allow you to send an email when clicked?
+To change the text into a clickable link to send email you need to use the " mailto " within the href tag.
+ex : <a href = "mailto:itlavenkatasai@gmail.com">click to mail</a>
+
+21)what is logical and physical tags?

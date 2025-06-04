@@ -1,0 +1,307 @@
+✅ What is JavaScript?
+JavaScript is a high-level, interpreted, and dynamic programming language primarily used to create interactive and dynamic content on websites.
+
+It runs in the browser and is one of the core technologies of web development, along with HTML and CSS.
+javascript is single thread language it means javascript runs one line of code at a time in a single call stack.
+It can also be used on the server side using Node.js.
+🔹 Key Features of JavaScript
+      Feature	                     Description
+
+✅ Lightweight :	Designed to be simple and fast for small scripts in the browser
+✅ Interpreted Language:	Executes code line-by-line in the browser or Node.js (no compilation)
+✅ Dynamically Typed:	You don't need to declare variable types (e.g., let x = 10)
+✅ Object-Oriented:	Supports objects, classes, and inheritance
+✅ Event-Driven:	Handles events like clicks, hovers, and inputs with event listeners
+✅ Supports Functional Programming:	Functions are first-class citizens; you can pass them around as variables
+✅ Client-Side Scripting:	Primarily used for browser-side operations (form validation, animations)
+✅ Server-Side Support:	With Node.js, JavaScript can also run on the server
+✅ Asynchronous Programming:	Supports callbacks, promises, and async/await for non-blocking operations
+✅ Rich Libraries and Frameworks:	Like React, Angular, Vue for frontend, and Express for backend
+
+
+
+1)What are the different data types in JavaScript?
+-- javascript has eight main data types. divided into primitive and non-primitive.
+Primitive data types : primitive means this type is immutable (cannot change the values)
+
+* Number : Represents both integer and float values.
+* Big int : Represents very large integer
+* String : Represents textual value
+* Boolean : Represents logical values True OR False
+* Null : Represents the intentional absence of a object value. its typeof operator returns "object
+* undefined : A variable that has been declared but not assigned any value
+* symbool : represents a unique identifier (often used as object keys).
+
+Non-primitive data types : non-primitive means this type is mutable (can change the values)
+
+* Object : Used to store collection of data and more complex entites.
+
+2) What is the difference between var, let, and const?
+ ** Var:
+        ➡️It is function-scoped, which means it's available throughout the whole function, even outside of blocks like if or for. 
+        ➡️ var declarations are hoisted to the top of their scope and automatically initialized 
+        with undefined.
+             
+        ➡️ var used to re-declare and re-assign the values (same scope or different scope).
+
+ ** Let:
+        ➡️ let is used to declare the vairables ,that are block-scoped, meaning they are only
+             accessible within the {} block where they are defined.
+        ➡️ let is hoisted but not initialized, so accessing it before declaration results in a ReferenceError.
+        ➡️ using let reassign allow but in same scope re-declare is not allow.
+
+** Const:
+        ➡️"const is used to declare variables that cannot be reassigned. It is block-scoped like let,
+        and once a value is assigned, it cannot be changed. However, if the value is an object or array, you can still modify its contents."
+
+3) What are truthy and falsy values?
+
+*** Truthy values are values that evaluate to true in a boolean context, like non-zero numbers, non-empty strings, objects, and arrays.
+*** Falsy values evaluate to false, and include: false, 0, "", null, undefined, NaN, and 0n.     
+
+4) What is the difference between == and ===?
+== checks for value equality with type conversion (loose equality).
+=== checks for both value and type equality (strict equality).
+Ex : '5' == 5     // true  (types are different, but values are loosely equal)
+     '5' === 5    // false (types are different)
+
+5) What is a closure? Can you give an example?
+==>A closure is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment). 
+In other words, a closure gives a function access to its outer scope. In JavaScript,
+ closures are created every time a function is created, at function creation time.
+==>A closure is a function that remembers variables from its outer function, even after the outer function is done running.
+   (OR)
+   closure in a javascript means an inner function have asccess to the vairables that are defined in the outer function
+   whenever we are declaring a function inside another function we are actually creating closure.
+ex: function greet(name) {
+  return function() {
+    console.log("Hello, " + name);
+  };
+}
+
+const sayHello = greet("Venkatasai");
+sayHello(); // Output: Hello, Venkatasai
+
+6) How does JavaScript handle asynchronous operations?
+
+JavaScript handles asynchronous operations using a combination of the event loop, Web APIs, and constructs 
+like callbacks, Promises, and async/await. This architecture allows JavaScript to perform non-blocking operations, 
+enabling the execution of long-running tasks (like network requests or file I/O) without freezing the main thread.
+
+🧠 The Event Loop: JavaScript’s Asynchronous Engine
+JavaScript operates on a single-threaded model, meaning it can execute one piece of code at a time. 
+To manage asynchronous operations without blocking the main thread, JavaScript utilizes the event loop. Here's how it works:
+
+Call Stack: This is where JavaScript keeps track of function calls. When a function is invoked, it's added to the stack; once it finishes, it's removed.
+
+Web APIs: When asynchronous functions like setTimeout or fetch are called, they're handed off to the browser's Web APIs,
+which handle these operations separately.
+
+Callback Queue: Once the Web API completes an operation, it places the corresponding callback function into the callback queue.
+
+Event Loop: The event loop continuously checks if the call stack is empty. If it is, it moves the first function from the callback queue to the call stack for execution.
+
+This mechanism ensures that asynchronous operations don't block the main thread, allowing JavaScript to handle tasks efficiently.
+⚙️ How It All Works Together
+When an asynchronous operation is initiated (e.g., a network request), JavaScript delegates this task to the browser's Web APIs.
+Once the operation completes, the callback function associated with it is placed in the callback queue. 
+The event loop then ensures that these callbacks are executed in order, without blocking the main execution thread.
+
+This architecture allows JavaScript to handle multiple asynchronous operations efficiently, providing a responsive 
+experience in web applications.
+
+7)What is the this keyword and how does it work?
+
+"this in JavaScript refers to the object that is currently executing the function. Its value depends on how the function is called, not where it is defined.
+
+For example, inside an object method, this refers to the object itself. In a regular function, it refers to the global object (like window in browsers), unless we are in strict mode, where it becomes undefined.
+
+In arrow functions, this is lexically scoped—it takes the value of this from the surrounding context, which makes arrow functions useful when we want to preserve the this from a parent scope.
+
+Also, we can explicitly set the value of this using call(), apply(), or bind()."
+const person = {
+  name: 'Sai',
+  greet() {
+    console.log(this.name);
+  }
+};
+person.greet(); // Outputs 'Sai'
+
+Here, this refers to the person object."
+
+8) What are template literals?
+"Template literals in JavaScript are strings enclosed by backticks (`) instead of single or double quotes. They allow for easier string interpolation using ${} syntax, support multi-line strings without special characters, and can embed expressions or function calls directly in the string.
+
+They make the code cleaner and more readable compared to traditional string concatenation."
+const msg = `Hello, ${name}!`;
+9) What is event bubbling and how can it be stopped?
+
+"Event bubbling is the process where an event moves from the target element up through its parent elements in the DOM tree. 
+For example, a click on a button inside a div will trigger both the button’s and the div’s click handlers—unless the bubbling is stopped.
+
+We can stop this bubbling using event.stopPropagation(), which prevents the event from propagating to ancestor elements."
+
+ex : <div id="parent">
+  <button id="child">Click Me</button>
+</div>
+
+js : document.getElementById("parent").addEventListener("click", () => {
+  console.log("Parent clicked");
+});
+
+document.getElementById("child").addEventListener("click", () => {
+  console.log("Child clicked");
+});
+✅ When you click the button, the output is:
+Child clicked
+Parent clicked
+➡️ This happens because the click event bubbles from #child to #parent.
+ How to Stop Event Bubbling
+ Use the method:
+event.stopPropagation();
+js : 
+document.getElementById("child").addEventListener("click", (event) => {
+  console.log("Child clicked");
+  event.stopPropagation(); // Stops bubbling!
+});
+o/p : Child clicked
+
+10) What is the difference between null and undefined?
+
+"undefined means a variable has been declared but hasn't been assigned a value. 
+It's automatically set by JavaScript. On the other hand, null is an assignment value that represents 'no value' or 'nothing',
+ and is set intentionally by the developer.
+
+For example, if I want to reset a variable, I might assign it to null, but if I forget to assign anything, it will be undefined by default."
+undefined: JavaScript gives this value to a variable that has been declared but not assigned a value.
+let a;
+console.log(a); // undefined
+null: You assign null when you want to intentionally clear or reset a variable.
+let b = null;
+console.log(b); // null
+11)What is the event loop in JavaScript?
+The event loop in JavaScript is a mechanism that handles asynchronous operations, 
+allowing JavaScript to be non-blocking even though it is single-threaded.
+
+🔁 Why do we need the Event Loop?
+JavaScript runs code synchronously by default. But we often deal with asynchronous tasks like:
+
+setTimeout
+
+fetch
+
+Reading files (Node.js)
+
+User input
+
+The event loop allows the JavaScript engine to keep executing other code while waiting for these tasks to complete.
+
+⚙️ How the Event Loop Works
+Here's a simplified view:
+
+Call Stack
+JavaScript executes code here. Only one thing runs at a time.
+
+Web APIs / Node APIs
+Browser or Node.js handles async tasks (timers, HTTP requests, etc.).
+
+Callback Queue (Task Queue)
+When an async task completes, its callback is sent here.
+
+Event Loop
+Constantly checks:
+
+Is the call stack empty?
+
+If yes → it takes the first task from the queue and pushes it to the call stack.
+visualisation : 
++------------------+      async done      +-------------------+
+|  Call Stack      |  <-----------------  |  Callback Queue    |
+|------------------|                      +-------------------+
+| console.log("1") |                      | () => console.log |
++------------------+                      +-------------------+
+        ↑                                      ↓
+        |     Event Loop (moves tasks from     |
+        |     the queue to the stack)          |
+        +--------------------------------------+
+        
+Intermediate questions : 
+1) what is callback function?
+A callback function is a function that is passed as an argument to another function and 
+is executed after that function completes its operation.
+It is often used in asynchronous programming (like with APIs, timers, file operations).
+function greet(name, callback) {
+  console.log("Hello, " + name);
+  callback(); // calling the callback function
+}
+
+function sayBye() {
+  console.log("Goodbye!");
+}
+
+// Passing sayBye as a callback to greet
+greet("Venkatasai", sayBye);
+Output:
+Copy
+Edit
+Hello, Venkatasai
+Goodbye!
+2) what is a promise , and how it used?
+A Promise is an object in JavaScript that represents the eventual completion (or failure)
+of an asynchronous operation and its resulting value.
+📦 Promise States:
+Pending – initial state.
+
+Fulfilled – operation completed successfully.
+
+Rejected – operation failed.
+
+🆚 Why Use Promises Instead of Callbacks?
+Callbacks can cause callback hell (nested callbacks),
+making code hard to read and maintain. Promises provide a cleaner, chainable syntax.
+
+4)What are higher-order functions?
+A Higher-Order Function is a function that either:
+
+Takes another function as an argument, or
+
+Returns a function as its result.
+function greet(name) {
+  return `Hello, ${name}`;
+}
+
+function processUser(callback) {
+  const name = "Venkatasai";
+  console.log(callback(name));  // Passing function as argument
+}
+
+processUser(greet);
+output 👍 hello venkatasai.
+ Common JavaScript Higher-Order Functions:
+map()
+
+filter()
+
+reduce()
+
+forEach()
+
+sort()
+
+
+1)What is the event loop in JavaScript?(completed)
+2)What is a promise, and how is it used?
+3)What are arrow functions and how are they different from traditional functions?
+4)What are higher-order functions?
+5)What is destructuring in JavaScript?
+6)What is a callback function?
+7)What are the different ways to clone an object in JavaScript?
+8)What is the difference between map(), forEach(), filter(), and reduce()?
+9)what is the difference between window and document?
+10)what is recursion in javascript?
+11)what is object type in js and key features?
+12)what is arrow functions?
+13)how many ways to create objects and how to create object use class (constuctor)?
+14)what are pure and impure function?
+
+

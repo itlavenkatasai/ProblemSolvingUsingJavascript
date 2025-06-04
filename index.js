@@ -1,7 +1,7 @@
-/*let stack = [1,2,3,4];
-const current = stack.pop();
-console.log(current);*/
-
-let str = "a good   example";
-str = str.split(" ").reverse().join(" ");
-console.log(str);
+function abc(){
+    console.log();
+}
+abc();
+abc.xyz = 10;
+abc.xyz = 20;
+abc();

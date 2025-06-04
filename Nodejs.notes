@@ -1,0 +1,56 @@
+--->Nodejs is a javascript run time environment.
+--->Nodejs is a single threaded and Asynchronous language.
+    ***Multithreading meaning Parllelly run multi tasks with multiple CPU's.
+    ***Singlethreading meaning at a time only one task run with single CPU.
+--->Nodejs is a Non-Blocking.it is allows to handle multiple requests at same time without block the request.
+      ### Here is how Node.js handles a file request:
+	>Sends the task to the computer's file system.
+	>Ready to handle the next request.
+	>When the file system has opened and read the file, the server returns the content to the client.
+    
+--->Nodejs is a independent language it runs different platforms like linux,mac,windows..etc.
+
+1) What is Node.js and why is it used?
+
+Node.js is a runtime environment that allows you to run JavaScript on the server side. 
+It’s used for building fast, scalable network applications, especially APIs and real-time apps.
+
+2)What is NPM?
+NPM (Node Package Manager) is the default package manager for Node.js. It helps install, manage, and share packages like Express, Lodash, etc.
+
+3) What is the difference between require() and import?
+require() is used in CommonJS (Node’s default module system), 
+while import is used in ES Modules with "type": "module" in package.json.
+
+4) What is a callback function in Node.js?
+A callback is a function passed into another function to be executed later,
+typically after an async operation like reading a file or querying a database.
+
+5) What is middleware in Express.js?
+6)What is the difference between synchronous and asynchronous functions?
+Synchronous functions block the execution of further code until they finish. 
+Asynchronous functions (like with callbacks or promises) allow the rest of the code to run while waiting for a result.
+
+7) What are common built-in modules in Node.js?
+Some built-in modules are:
+
+http – for creating servers
+
+fs – file system operations
+
+path – working with file paths
+
+os – system info
+8) What is the use of fs module?
+The fs module is used to interact with the file system. You can read, write, create, and delete files.
+
+9) How do you handle errors in async functions?
+With callbacks: check err in the first parameter.
+
+With promises: use .catch().
+
+With async/await: wrap in try-catch.
+
+10) How did you implement authentication in your project?
+Example:
+"I used JWT (JSON Web Token) for stateless authentication. After login, a token is generated and sent to the client, which is used in future API calls."
