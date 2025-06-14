@@ -249,6 +249,9 @@ Goodbye!
 2) what is a promise , and how it used?
 A Promise is an object in JavaScript that represents the eventual completion (or failure)
 of an asynchronous operation and its resulting value.
+or
+A Promise is an object representing the future result of an asynchronous operation. 
+It has three states: pending, fulfilled, and rejected.
 📦 Promise States:
 Pending – initial state.
 
@@ -287,7 +290,61 @@ reduce()
 forEach()
 
 sort()
+5) what is recursion?
+Recursion is a programming technique where a function calls itself to solve smaller parts of a problem until it reaches a base condition (stopping point).
 
+6)what is destructuring?
+Destructuring is a syntax in JavaScript that lets you unpack values from arrays or properties
+from objects into separate variables in a clean and readable way.(extract all values from array or properties from values into seperate vairables).
+
+13)how many ways to create objects and how to create object use class (constuctor)?
+There are 5 common ways to create objects in JavaScript:
+ 1. Using Object Literal🔹 
+ 2. Using new Object()
+  3. Using a Constructor Function 
+  4. Using Object.create()
+ 5. Using ES6 class and constructor
+
+7)What are the different ways to clone an object in JavaScript?
+In JavaScript, cloning an object means creating a copy of that object.
+ 1. Using Object.assign() (Shallow Copy)
+const original = { name: "Sai", age: 22 };
+const clone = Object.assign({}, original);
+2. Using Spread Operator (Shallow Copy)
+const original = { name: "Sai", age: 22 };
+const clone = { ...original };
+ 3. Using JSON Methods (Deep Copy – but with limitations)
+const original = { name: "Sai", address: { city: "Hyderabad" } };
+const clone = JSON.parse(JSON.stringify(original));
+4. Using Structured Clone API (Deep Copy ✅ Best Modern Way)
+const original = { name: "Sai", address: { city: "Hyd" } };
+const clone = structuredClone(original);
+
+8) what is callback hell?
+Callback Hell is a situation where multiple nested callbacks make code hard to read, 
+hard to maintain, and difficult to debug.
+⚠️ Problems with Callback Hell:
+Hard to read and understand
+
+Difficult to debug
+
+Not reusable
+
+Hard to handle errors
+
+No proper flow control
+
+9)what is object type and key feauters?
+In JavaScript, an object is a non-primitive data type used to store multiple values in a single variable as key–value pairs.
+🔑 Key Features of JavaScript Objects
+Feature	Description
+Key–Value Pairs :	Stores data as { key: value }
+Dynamic : 	Can add, update, or delete properties anytime
+Nested Structure : 	Can contain other objects, arrays, and functions
+Reference Type : 	Stored and compared by reference, not value
+Access Properties : 	Using dot (.) or bracket [] notation
+Methods	 : Functions stored as object properties
+Prototype :  Inheritance	Inherit features from other objects
 
 1)What is the event loop in JavaScript?(completed)
 2)What is a promise, and how is it used?

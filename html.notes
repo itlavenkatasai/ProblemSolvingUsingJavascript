@@ -6,12 +6,13 @@ HTML is not a programming language—it's a markup language that works together 
 Without HTML, browsers wouldn’t know how to render a webpage."
 
 2)HTML tags?
+A tag is a part of an element, enclosed in angle brackets < >.
 html tags are used markup start and end tags.
 these are 2 types : open and closing tags
 ex: <p></p> this is a tag open and close tag.
 
 3)HTML elements?
-html element usually consist of start tag and end tag.
+An element is the entire structure that includes the opening tag, content, and closing tag.
 ex: <p>This is the content of the paragraph </p>
 
 4)HTML attributes?
@@ -116,7 +117,8 @@ Why Use Style Sheets?
 ✅ Enables responsive design for all screen sizes
 
 13)explain the layout of html?
-"The layout of an HTML page refers to how different sections of a web page are structured and arranged. It's mainly done using HTML tags that define the semantic meaning of each part of the page.
+"The layout of an HTML page refers to how different sections of a web page are structured and arranged.
+It's mainly done using HTML tags that define the semantic meaning of each part of the page.
 
 A typical layout includes:
 
@@ -136,7 +138,7 @@ A typical layout includes:
 
 14)what is marquee tag ?
 marquee is used for the scrolling text on a web page.it scrolls the image or text up,down left or right automatically.
-if you put the text which yiu want to scroll within the <marquee>  </marquee>.
+if you put the text which you want to scroll within the <marquee>  </marquee>.
 
 15)what are the tags used to seperate a section ?
 I) <br>
@@ -146,11 +148,10 @@ III)<blockquote>
 16)difference between div and span?
 📦 <div> – Block-level Container
 *Used to divide the page into sections
-
 *Starts on a new line and takes up the full width available
+
 ✏️ <span> – Inline Container
 *Used to style part of a line or sentence
-
 *Does not break the flow of text
 *for adding colors on text and highlight any text.
 ex : <p>This is a <span style="color: red;">highlighted</span> word.</p>
@@ -186,3 +187,50 @@ To change the text into a clickable link to send email you need to use the " mai
 ex : <a href = "mailto:itlavenkatasai@gmail.com">click to mail</a>
 
 21)what is logical and physical tags?
+22) what is form tag ?
+The <form> tag in HTML is used to collect user input and send it to a server for processing, like login details, feedback, or signup information.
+action:	URL where the form data is sent (like a server page or API).
+method="get" is used when data is not sensitive (e.g., search forms).
+
+method="post" is better for secure or large data (e.g., login, feedback).
+target="_blank"
+✅ Opens the result in a new tab or window.(Opens link in new tab.)
+
+target="_self" (default) 
+✅ Opens the result in the same window/tab.
+23) difference between nav,section,article?
+<nav> – for navigation links
+
+<section> – for grouping related content
+
+<article> – for self-contained content like blog posts or news
+
+24)what is lazy loading?
+Lazy Loading means loading something only when it is needed, instead of loading everything at the start.
+🧠 Why Use Lazy Loading?
+✅ Improves page load speed
+
+✅ Saves bandwidth
+
+✅ Better performance, especially for large images or videos
+ex ; <img src="image.jpg" loading="lazy" alt="A sample image">
+
+25) what is DOM in html?
+DOM stands for Document Object Model.
+It is a tree-like structure that represents the HTML elements of a web page in memory,
+allowing JavaScript to access and change content, structure, or style dynamically.
+🧠 Simple Explanation:
+When a browser loads an HTML page, it creates a DOM – like a map of the page – 
+where every element (<div>, <h1>, <p>, etc.) becomes a node in the tree.
+
+26) how to access elements in JavaScript?
+Method	Use
+document.getElementById("id")	Selects an element by ID
+document.getElementsByClassName("class")[index]	Selects elements by class (returns a list)
+document.querySelector("selector")	Selects the first match (CSS-style selector)
+document.querySelectorAll("selector")	Selects all matches (returns NodeList)
+
+27)how to create elements using JavaScript?
+let newDiv = document.createElement("div"); // create a <div>
+newDiv.innerText = "New content"; // set text inside the div
+document.body.appendChild(newDiv); // add it to the end of the body

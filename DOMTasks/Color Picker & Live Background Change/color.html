@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <title>Color Picker & Live Background Change</title>
+    </head>
+    <body id="body-container">
+        <input type="text" id="color-name">
+        <script>
+            let body = document.getElementById("body-container");
+            let colorName = document.getElementById("color-name");
+            colorName.addEventListener("input",() => {
+                body.style.backgroundColor = colorName.value;
+            })
+        </script>
+    </body>
+</html>

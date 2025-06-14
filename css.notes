@@ -1,0 +1,113 @@
+1)what is CSS?
+CSS (Cascading Style Sheets) is used to style HTML elements on a webpage. It controls layout, colors, fonts, and spacing.
+
+2)What are the different types of CSS?
+Inline CSS – written inside an HTML element (using style attribute).
+
+Internal CSS – written inside <style> tags in the <head>.
+
+External CSS – written in a separate .css file and linked using <link> tag.
+
+3)What is the difference between id and class in CSS?
+id is unique and used once per page. It is selected with #idName.
+
+class can be used multiple times. It is selected with .className.
+
+4)What is the Box Model in CSS?
+The CSS Box Model describes how every HTML element is structured and how space is calculated around it.
+Each element is a rectangular box made of the following four parts:
+
+Content : The actual text or image inside the box.
+
+Example: Text inside a <div> or an image inside a container.
+
+Padding :  The space inside the box, between the content and the border.
+
+Use: Increases space around the content but inside the element.
+
+Border : The line or edge that goes around the padding and content.
+
+Use: Visually separates elements or adds styling.
+
+Margin : The space outside the border, between this element and other elements.
+
+Use: Creates distance between boxes.
+Visually shows : :  👍
+|<- Margin ->|
+ ----------------------
+|   Border (Optional)   |
+|  ------------------   |
+|  |   Padding       |  |
+|  |  ------------   |  |
+|  |  |  Content  |  |  |
+|  |  ------------   |  |
+|  ------------------   |
+ ----------------------
+|<- Margin ->|
+
+5)give defination of all postion values?
+1. static (default)
+Definition: The element is positioned according to the normal document flow.
+
+Note: top, left, right, bottom do not work.
+
+Use case: When you don’t want to change the default layout.
+
+2. relative
+Definition: The element is positioned relative to its normal position.
+
+Note: You can use top, left, right, bottom to shift it from where it would normally appear.
+
+Use case: Often used as a reference for absolutely positioned child elements.
+
+3. absolute
+Definition: The element is positioned relative to the nearest positioned ancestor (relative, absolute, or fixed). If no such ancestor, it's relative to <html> (page).
+
+Note: It is removed from normal flow, so it doesn't affect or get affected by nearby elements.
+Moves with page scroll.
+4. fixed 👍
+Definition: The element is positioned relative to the browser window, and it stays in place even when you scroll the page.
+
+Note: It is also removed from the document flow.
+fixed
+Definition: The element is positioned relative to the browser window, and it stays in place even when you scroll the page.
+
+Note: It is also removed from the document flow.
+
+6)What is the difference between visibility: hidden and display: none?
+visibility: hidden: Element is hidden but takes space.
+
+display: none: Element is removed from the layout.
+
+7)What is Flexbox in CSS?
+Flexbox is a layout model used to arrange items in a row or column and distribute space.
+8)What are pseudo-classes in CSS?
+:hover – when mouse hovers
+
+:focus – when input is focused
+
+:first-child – first element in parent
+9)How do you center a div?
+div {
+  margin: 0 auto;            
+  width: 50%;
+}
+or
+display: flex;
+justify-content: center;
+align-items: center;
+
+10)What is a responsive web design?
+A design that adjusts its layout to different screen sizes (mobile, tablet, desktop).
+
+11)what is media queries?
+Media Query is a CSS technique that allows you to apply styles only if certain conditions (like screen width, height, or device type) are met.
+🎯 Why Use Media Queries?
+To make websites mobile-friendly
+
+To improve user experience on all devices
+
+To control layout, font size, or visibility for different screens
+
+12)What is specificity in CSS?
+It decides which rule is applied when multiple rules match an element. Inline styles > ID selectors > class selectors > element selectors.

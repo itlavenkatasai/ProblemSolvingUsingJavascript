@@ -1,0 +1,112 @@
+1) what is react?
+react is a javascript library used to build a user interfaces,especially single page applications.it create 
+a fast and interactive web apps using components.maintain application state efficiently,and one more thing react is 
+declarative which means developer can describe how the UI can look based on application state.
+
+2)what is components in react?
+a component describes a part of the user interface. a component is a resusable piece of ui. react apps
+made of multiple components like buttons,headers or entire page.
+---> component is a one js file in the file written  a function.
+
+3)what is JSX?
+JSX stands for JavaScript XML. It lets you write HTML-like code inside JavaScript,
+which React understands and converts into UI.
+Jsx allows us to include js code into Html using curly braces.this allows us to make dynamic ui content
+in pages.
+
+4)what is the difference between Functional and class components ?
+
+**) class components : class components are older version.defined Es6 classes extending react components.
+state manages using this.state and this.setState. utilize lifecycle methods like componentDidMount,componentDidUpdate.
+syntax : class with lifecycle methods.
+**)Functional components : defined as javascript functions. introduced react hooks,state managed by useState and Hooks
+it is eaiser to read and understand.
+syntax arrow or regular functions
+
+5)what is state and props ? 
+state is a built in object that holds a data or UI info that changes over time.it is used to make the
+component dynamic.
+props (properties) are used to pass the data from one component to another (parent to child).
+
+6) what is useState() and useEffect() ?
+useState() is a reacthook that allows you to add state to functional components.
+useEffect() is a reacthook that lets you run code after the component renders. it is used for side useEffects
+like fetching data or setting up timers.
+
+7)what is key in react?
+key is a unique ID used when rendering lists.it helps react know which item is changed.
+ex: {items.map(item => <li key={item.id}>{item.name}</li>)}
+
+8)difference between package.json and packageLock.json ?
+package.json is a configuration for NPM.whatever packages our project needs we install those packages using NPM.
+->once package installation complete ,their version and configuration related information is stored as dependences
+inside a package.json.
+-->Package-lock.json locks the exact version of packages being
+used in the project.
+
+**In package. json we have information about generic version
+of installed packages whereas in package.lock.json we have
+information about the specific or exact version of
+installed packages.
+
+9)what is web pack?
+webpack is a javascript module boundler ,it takes javascript files,stylesheets and images and transform them
+into format that is optimized for web.
+webpack do things like - Hot module replacement,file watcher algorithm,bundling,clean our code,tree shaking
+image optimization,dev and production build.
+
+10)what is difference between useRef and useState ?
+-->useRef is reactHook that gives you a way to store a mutable value that doesn't cause re-render when updated.
+-->useRef is used to reference the DOM elements and we can access that DOM elements directly.
+-->we can change ref.current value but component won't re-render whehever it changed.but in state it re-render whennever it changed
+-->when a piece of info is only used in event-handlers and it doesn't require re-render keep it in Ref.
+*********************************************************************8
+-->useState is a reactHook that letd you create and manage state in a function component.
+💡 “State” means any data that changes when a user interacts with your app — like button clicks, form inputs, toggles, etc.
+-->🧠 Why use useState?
+Because React components are just functions, they don’t remember things on their own.
+useState gives them memory — so they can remember values between renders.
+-->useState helps : store values,update UI when values changes,keep values between renders,handle user interaction.
+
+11)what is React.Strictmode?
+<React.StrictMode> is a tool for development that helps you write better React code by identifying potential problems early.
+it is used to detects side effects and bad logic.alerts for deprecated API's
+Double-invoking functions like your component or useEffect (to detect side-effects)
+🛑 It does NOT affect the UI or behavior in production — it’s only for development debugging.
+
+12)what is react-lifecycle methods using class-components?
+-mounting(created) == Mounting is the phase when a component is created and inserted into the DOM (i.e., added to the browser screen for the first time).
+🧠 Example: When a page first loads and your React component shows up — that’s mounting.
+-updating(updated) ==Updating is the phase when a component re-renders because of changes to state or props.
+-unmounting(destroyed) ==Unmounting is the phase when a component is removed from the DOM (i.e., taken off the screen).
+🧠 Example: Navigating to another page and removing the current component — React cleans it up.
+
+13)difference between state and props?
+"Props are used to pass data from one component to another (parent-child)— they are read-only. props are immutable 
+and child components cannot modify props received from parent,Changes to props trigger a re-render of the component receiving the updated props.
+State is used to manage data inside a component, and it can change over time using setState or useState. 
+Changing state causes the component to re-render."
+14)what is controlled and uncontrolled components?
+A controlled component is a form element whose value is controlled by React state.
+
+✅ React is the single source of truth for the data.
+
+An uncontrolled component is a form element that manages its own value using the DOM, not React state.
+
+✅ You use useRef() to get the value only when needed.
+
+15)what is router in react?
+react router is a library it is used to handle navigation between different pages or views in react application.
+without reloading the page.like navigation \home,\about..etc (all inside in a single page application)
+🧠 Why Use React Router?
+✅ Create multiple "pages" in your app
+
+✅ Change the URL in the browser
+
+✅ Show different components for different routes
+
+✅ No page refresh — fast experience
+
+16)what is server side rendering and client-side rendering?
+when we do request it will go to server side and get html from server and it will render in the UI
+But in react HTML is prepared in the client side using javascript which is client side rendering.

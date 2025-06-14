@@ -19,9 +19,33 @@
 //     if(num > 0) return;
 //     return num*2;
 // }))
-function abc(){
-    console.log("hello");
+// function abc(){
+//     console.log("hello");
     
+// }
+// abc();
+// console.log(abc());
+
+function validParanthesis(str){
+    str = str.split("");
+    let arr = [];
+    let obj = {
+        '{' : '}',
+        '[' : ']',
+        '(' : ')'
+    }
+    
+    for(let i=0;i<Math.floor(str.length/2);i++){
+        if(obj[str[i]] == str.pop()){
+            str.pop();
+        }else{
+            if(obj[str[i]] == arr.pop()){
+                arr.pop();
+            }else{
+                
+            }
+        }
+    }
+
 }
-abc();
-console.log(abc());
+console.log(validParanthesis("()[]{}"));

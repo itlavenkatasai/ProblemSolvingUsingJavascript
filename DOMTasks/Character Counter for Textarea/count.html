@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Character Counter for Textarea</title>
+    </head>
+    <body>
+        <textarea id="text-area"></textarea>
+        <label id="count-char">Count : 0</label>
+        <script>
+            let textArea = document.getElementById("text-area");
+            let count = document.getElementById("count-char");
+            textArea.addEventListener("input",() => {
+                let textLength = textArea.value.length;
+                count.textContent = `count : ${textLength}`;
+            })
+        </script>
+    </body>
+</html>

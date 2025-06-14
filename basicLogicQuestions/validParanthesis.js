@@ -1,13 +1,20 @@
-arr = [1,2,3,4,5,5];
-largest = arr[0];
-secondlargest = -Infinity;
-for(let i=1;i<arr.length;i++){
-    if(arr[i]>largest){
-        secondlargest = largest;
-        largest = arr[i];
+function validParanthesis(str){
+    str = str.split("");
+    let obj = {
+    '}' : '{',
+    ']' : '[',
+    ')' : '('
     }
-    if(arr[i]<largest && arr[i]>secondlargest){
-        secondlargest = arr[i];
+    let arr = [];
+    for(let i=0;i<str.length;i++){
+        if(str[i] == '(' || str[i] == '{' || str[i] == '['){
+            arr.push(str[i]);
+        }else{
+            if(arr.pop() != obj[str[i]]){
+                return false;
+            }
+        }
     }
+    return arr.length === 0;
 }
-console.log(secondlargest);
+console.log(validParanthesis("(({{}})"));

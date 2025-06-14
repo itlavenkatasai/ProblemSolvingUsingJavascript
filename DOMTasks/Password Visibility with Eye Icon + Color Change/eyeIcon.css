@@ -1,0 +1,17 @@
+html,body{
+    margin: 0;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+#input-container{
+    position: relative;
+}
+#password{
+    /* position: absolute; */
+}
+#visible-icon{
+    position: absolute;
+    left: 180px;
+}

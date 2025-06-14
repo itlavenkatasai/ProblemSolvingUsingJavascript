@@ -1,13 +1,12 @@
 <html>
-
-<head></head>
-
-<body>
-    <div onclick="alert('parent div')">
-        <div onclick="alert('chiddiv')">
-            <button onclick="alert('button Click')">Button Click</button>
+    <head>
+        <title>create dynamic button</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="style.js"></script>
+    </head>
+    <body>
+        <div id="button-container">
+            <button id="button" onclick="buttonClick()">Click</button>
         </div>
-    </div>
-</body>
-
+    </body>
 </html>
